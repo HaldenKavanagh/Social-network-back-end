@@ -1,10 +1,19 @@
-const router = require('express').Router();
+const router = require("express").Router();
+const {
+  getUsers,
+  getSingleUser,
+  createUser,
+  putSingleUser,
+  deleteSingleUser,
+} = require("../../controllers/userController");
 
-// get all users
-// get user by id
-// post a new user
-// put to update a user by id
-// delete a user
+// http://localhost:3001/api/users
+router.route("/").get(getUsers).post(createUser);
+
+// http://localhost:3001/api/users/:id
+router.route("/:userId").get(getSingleUser);
+//   .put(putSingleUser)
+//   .delete(deleteSingleUser);
 
 // /api/users/:userId/friends/:friendId
 // post route to create a reaction stored in a single thought's reaction
