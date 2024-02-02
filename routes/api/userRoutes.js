@@ -6,6 +6,7 @@ const {
   putSingleUser,
   deleteSingleUser,
   addFriendToUser,
+  deleteFriend,
 } = require("../../controllers/userController");
 
 // http://localhost:3001/api/users
@@ -19,7 +20,10 @@ router
   .delete(deleteSingleUser);
 
 // http://localhost:3001/api/users/:userid/friends/friendId
-router.route("/:userId/friends/friendId").post(addFriendToUser);
+router
+  .route("/:userId/friends/:friendId")
+  .post(addFriendToUser)
+  .delete(deleteFriend);
 // /api/users/:userId/friends/:friendId
 // post route to create a reaction stored in a single thought's reaction
 // delete route for a reaction based on id
