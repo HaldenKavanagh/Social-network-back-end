@@ -32,7 +32,7 @@ const thoughtData = [
     reactions: [
       {
         reactionBody: "I like interesting, thought!",
-        username: "user2",
+        username: "user4",
       },
       {
         reactionBody: "Sometimes I have thoughts same :D",

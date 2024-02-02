@@ -24,8 +24,5 @@ router
   .route("/:userId/friends/:friendId")
   .post(addFriendToUser)
   .delete(deleteFriend);
-// /api/users/:userId/friends/:friendId
-// post route to create a reaction stored in a single thought's reaction
-// delete route for a reaction based on id
 
 module.exports = router;
