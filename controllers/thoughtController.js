@@ -92,7 +92,7 @@ module.exports = {
       if (!thought) {
         return res.status(404).json({ message: "Thought not found" });
       }
-      console.log("sthought is validated");
+      console.log("thought is validated");
       if (!reactionBody) {
         return res.status(400).json({ message: "Reaction body is required" });
       }
